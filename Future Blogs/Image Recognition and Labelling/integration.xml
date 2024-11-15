@@ -1,0 +1,10 @@
+<root><Records>[{'messageId': 'fb010b13-5057-40b2-8499-44805b870575', 'receiptHandle': 'AQEB8+v7TWqAQ+y2SCatEttt6Dc59dgodus121tSQKmiRwrQWymzgbTWYF3zTCpXo3xB4vnf3d7ftH0l3Tll8aIB9RaD4XhEL9R8S6Te49Qqco8MmmWufeQe/ucfMSjnIDdcU9avrJ7yOLc/hDlO5rpxYDXuSolTpaTCItUc1V5RJQQUxAf/zEJthwE0DKv/km999VwpWa8Y+dctYt7cOP0I7fGxFHTnmaEmPOWJlro74h2rcDfRvbkPJrBjiQP6GHYxiNe5o2Iq851pEDKnwHZfij50D2R/JPwkuY+yW3nk6Bo0HI6i4/ymfZhTEuScLya9ZjNdWBU6OvvrMiEsC/kmOLY5XU7HYGJ+yUi1X3Y6epUqw9GSeeSygKMYVVM/LO9mMt264fJFQTvtZlRHEAFitjoeQLwooNI4GF7FESXu+CDILPXbs5Ra0MCEj+W9O7P3NvXff/XEcGPdrtfjqXJ04Q==', 'body': "['Dog House', 'Den', 'Indoors', 'Kennel', 'Animal', 'Canine', 'Dog', 'Mammal', 'Pet']", 'attributes': {'ApproximateReceiveCount': '2', 'AWSTraceHeader': 'Root=1-672faa6e-939d0fdeab32019a5320fc01;Parent=7e8ce074868efe30;Sampled=0;Lineage=2:e6c9fc32:0', 'SentTimestamp': '1731177071994', 'SenderId': 'AIDAIT2UOQQY3AUEKVGXU', 'ApproximateFirstReceiveTimestamp': '1731177072004'}, 'messageAttributes': {}, 'md5OfBody': 'c286bd956fb4791ae0de466d7bf3d683', 'eventSource': 'aws:sqs', 'eventSourceARN': 'arn:aws:sqs:us-east-1:324765371921:IntegrationStack-rekognizedimagequeue8EB5D22B-0RPStFiZ21WI', 'awsRegion': 'us-east-1'}]</Records></root>
+
+
+
+curl "$(aws cloudformation describe-stacks --stack-name APIStack --query "Stacks[0].Outputs[0].OutputValue" --region us-east-1 --output text)?name=img-01.jpg&url=https://m.media-amazon.com/images/I/61IxvVh3M8L._AC_SX679_.jpg"
+
+curl "$(aws cloudformation describe-stacks --stack-name RekognitionStack --query "Stacks[0].Outputs[0].OutputValue" --region us-east-1 --output text)"
+
+
+curl "$(aws cloudformation describe-stacks --stack-name APIStack --query "Stacks[0].Outputs[0].OutputValue" --region us-east-1 --output text)?name=img-01.jpg&url=https://m.media-amazon.com/images/I/61IxvVh3M8L._AC_SX679_.jpg"
